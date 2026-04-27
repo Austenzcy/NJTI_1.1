@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NJTI 数据统计后台</title>
+  <link rel="icon" href="assets/common/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NJTI">
+        <img src="assets/common/logo.svg" alt="" class="brand-logo" />
+        <span>NJTI 数据统计</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="view result-view">
+        <div class="result-card admin-card">
+          <div class="result-header">
+            <p class="kicker">Admin Dashboard</p>
+            <h2>NJTI 数据统计后台</h2>
+            <p class="traits-line">查看用户测试次数、人格分布和四维度总体倾向。</p>
+          </div>
+
+          <div class="admin-token-row">
+            <input id="adminToken" type="password" placeholder="如果设置了 ADMIN_TOKEN，请在这里输入" />
+            <button id="loadStatsBtn" class="btn primary">加载统计</button>
+          </div>
+          <p id="adminMsg" class="share-status"></p>
+
+          <section class="admin-grid">
+            <div class="admin-panel">
+              <h3>总测试次数</h3>
+              <p id="totalCount" class="admin-number">—</p>
+            </div>
+            <div class="admin-panel">
+              <h3>语言分布</h3>
+              <div id="languageStats" class="admin-list"></div>
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h3>16 种人格分布</h3>
+            <div id="personalityStats" class="admin-list wide"></div>
+          </section>
+
+          <section class="admin-panel">
+            <h3>四维度总体平均</h3>
+            <div id="dimensionStats" class="dimension-chart"></div>
+          </section>
+
+          <section class="admin-panel">
+            <h3>最近测试记录</h3>
+            <div id="recentStats" class="admin-table"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

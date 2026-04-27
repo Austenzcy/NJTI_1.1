@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NJTI 分享结果</title>
+  <meta name="description" content="查看好友分享的 NJTI 南京大学专属校园人格测试结果。" />
+  <link rel="icon" href="assets/common/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NJTI">
+        <img src="assets/common/logo.svg" alt="" class="brand-logo" />
+        <span>NJTI</span>
+      </a>
+      <label class="lang-select-wrap">
+        <span id="languageLabel">语言</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main>
+      <section class="view result-view">
+        <div id="loadingCard" class="result-card compact-card">
+          <p class="kicker">NJTI</p>
+          <h2 id="loadingText">正在读取分享结果……</h2>
+          <p id="errorText" class="note"></p>
+          <p><a class="btn primary" href="./" id="takeTestLink">我也要测</a></p>
+        </div>
+
+        <div id="sharedResultCard" class="result-card hidden">
+          <div class="result-header">
+            <p id="resultTitleLabel" class="kicker">分享的 NJTI 人格是</p>
+            <h2 id="resultName"></h2>
+            <p id="resultTraits" class="traits-line"></p>
+          </div>
+
+          <div class="result-main">
+            <div class="result-image-wrap">
+              <img id="resultImage" src="" alt="" />
+            </div>
+            <div class="result-text">
+              <section class="result-section">
+                <h3 id="personaLabel">一句话人设</h3>
+                <p id="resultPersona" class="lead"></p>
+              </section>
+              <section class="result-section">
+                <h3 id="detailLabel">人格详解</h3>
+                <p id="resultDetail"></p>
+              </section>
+              <section class="result-section scene-section">
+                <h3 id="sceneLabel">南大专属高光场景</h3>
+                <p id="resultScene"></p>
+              </section>
+            </div>
+          </div>
+
+          <section class="chart-section">
+            <h3 id="dimensionProfileLabel">四维度画像</h3>
+            <div id="dimensionChart" class="dimension-chart"></div>
+          </section>
+
+          <div class="result-actions">
+            <button id="copyBtn" class="btn secondary">复制链接</button>
+            <a id="homeBtn" class="btn primary" href="./">我也要测</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="share.js"></script>
+</body>
+</html>

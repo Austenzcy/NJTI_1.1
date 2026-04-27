@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NJTI 南京大学专属校园人格测试</title>
+  <meta name="description" content="NJTI 南京大学专属校园人格测试：24道题测出你的南大校园生存模式。" />
+  <link rel="icon" href="assets/common/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="NJTI">
+        <img src="assets/common/logo.svg" alt="" class="brand-logo" />
+        <span>NJTI</span>
+      </a>
+      <label class="lang-select-wrap">
+        <span id="languageLabel">语言</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main>
+      <section id="homeView" class="view hero-view">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <p id="siteKicker" class="kicker">Nanjing Jung Type Indicator</p>
+            <h1 id="siteTitle">NJTI 南京大学专属校园人格测试</h1>
+            <p id="siteSubtitle" class="subtitle">24道题，测出你的南大校园生存模式。</p>
+            <p id="authorLine" class="author">作者：Austen</p>
+            <div class="hero-actions">
+              <button id="startBtn" class="btn primary">开始测试</button>
+              <button id="continueBtn" class="btn secondary hidden">继续作答</button>
+            </div>
+            <p id="homeNote" class="note">娱乐测试，仅代表校园行为偏好，不是心理学诊断。</p>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="preview-stack">
+              <img src="assets/results/03-杜厦蘑菇人.webp" alt="" />
+              <img src="assets/results/12-蓝鲸串场王.webp" alt="" />
+              <img src="assets/results/13-火立方热场王.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quizView" class="view quiz-view hidden">
+        <div class="quiz-card">
+          <div class="quiz-topline">
+            <span id="questionCounter" class="counter">第 1 / 24 题</span>
+            <span id="chooseTip" class="choose-tip">选择最接近你的一个选项</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+          <h2 id="questionText" class="question-title"></h2>
+          <div id="optionsList" class="options-list"></div>
+          <p id="toast" class="toast hidden"></p>
+          <div class="quiz-actions">
+            <button id="prevBtn" class="btn secondary">上一题</button>
+            <button id="nextBtn" class="btn primary">下一题</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultView" class="view result-view hidden">
+        <div class="result-card">
+          <div class="result-header">
+            <p id="resultTitleLabel" class="kicker">你的 NJTI 人格是</p>
+            <h2 id="resultName"></h2>
+            <p id="resultTraits" class="traits-line"></p>
+          </div>
+
+          <div class="result-main">
+            <div class="result-image-wrap">
+              <img id="resultImage" src="" alt="" />
+            </div>
+            <div class="result-text">
+              <section class="result-section">
+                <h3 id="personaLabel">一句话人设</h3>
+                <p id="resultPersona" class="lead"></p>
+              </section>
+              <section class="result-section">
+                <h3 id="detailLabel">人格详解</h3>
+                <p id="resultDetail"></p>
+              </section>
+              <section class="result-section scene-section">
+                <h3 id="sceneLabel">南大专属高光场景</h3>
+                <p id="resultScene"></p>
+              </section>
+            </div>
+          </div>
+
+          <section class="chart-section">
+            <h3 id="dimensionProfileLabel">四维度画像</h3>
+            <div id="dimensionChart" class="dimension-chart"></div>
+          </section>
+
+          <div class="result-actions">
+            <button id="restartBtn" class="btn primary">重新测试</button>
+            <button id="copyBtn" class="btn secondary">复制链接</button>
+            <button id="homeBtn" class="btn ghost">返回首页</button>
+          </div>
+          <p id="shareStatus" class="share-status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
